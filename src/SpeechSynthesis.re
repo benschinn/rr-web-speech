@@ -7,6 +7,7 @@ type speech = {
 type t = {
   .
     [@bs.meth] "getVoices": unit => array(voice),
+    [@bs.meth] "speak": speech => unit,
 };
 
 [@bs.val] [@bs.scope ("window")] external speechSynthesis: t  = "";
@@ -19,5 +20,7 @@ let voices = synth##getVoices();
 let utterThis = speechSynthesisUtterance("hi");
 
 utterThis##rate #= 1.5;
+
+synth##speak(utterThis)
 
 utterThis##voice #= voices[28];
