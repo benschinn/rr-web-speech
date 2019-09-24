@@ -1,5 +1,5 @@
-# rr-web-speech
+# bs-web-speech
 
 ## WIP
 
-bindings to web speech api and react implementation
+ReasonML bindings to Web Speech API and SpeechSynthesis
