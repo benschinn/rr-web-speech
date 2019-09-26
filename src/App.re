@@ -82,9 +82,6 @@ let make = () => {
       ) 
     </div>
     <div style=css(~padding="10px", ~backgroundColor="chartreuse", ())>
-      
-    </div>
-    <div style=css(~padding="10px", ~backgroundColor="chartreuse", ())>
       <input type_="text" onChange=(evt => dispatch(SetUtterance(evt |> valueFromEvent)))/>
       <button 
          onClick=(_event => synth##speak(state.utter))
